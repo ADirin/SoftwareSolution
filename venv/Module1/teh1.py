@@ -115,3 +115,44 @@ print('------------------------3_Teh2----------------------------')
 #     print( year,' is a year')
 # else:
 #     pass
+
+print('-------------------------While Loops (while)---------------------')
+# print('-------------------4_teh1-------------------')
+# i = 1
+# while (i < 1000):
+#     if (i % 3 ==0):
+#         print(" the divisible value is: ", i)
+#     i +=1
+# print('-------------------4_teh2-------------------')
+# i = 0.0
+# i = float (input("enter the value in inches"))
+# while (i >0):
+#     cen = i * 2.54
+#     print( i, " in inches is equal", cen, " centimeter")
+#     i = float (input("enter the value in inches"))
+# print("bye ")
+
+print('-------------------4_teh3-------------------')
+
+
+smallest = None
+largest = None
+while True:
+
+    ans = input("Enter a number or Enter quite")
+    if ans == "":
+        break
+    try:
+        num = int(input("Enter the number: "))
+        if smallest is None or num < smallest:
+            smallest= num
+        if largest is None or num > largest:
+            largest = num
+    except ValueError:
+        print("Invalid input: ")
+if smallest is not None and largest is not None:
+    print('smallest: ',  smallest)
+    print('largest: ', largest)
+
+else:
+    print('No Number ')
