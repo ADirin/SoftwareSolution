@@ -134,25 +134,39 @@ print('-------------------------While Loops (while)---------------------')
 
 print('-------------------4_teh3-------------------')
 
+#
+# smallest = None
+# largest = None
+# while True:
+#
+#     ans = input("Enter a number or Enter quite")
+#     if ans == "":
+#         break
+#     try:
+#         num = int(input("Enter the number: "))
+#         if smallest is None or num < smallest:
+#             smallest= num
+#         if largest is None or num > largest:
+#             largest = num
+#     except ValueError:
+#         print("Invalid input: ")
+# if smallest is not None and largest is not None:
+#     print('smallest: ',  smallest)
+#     print('largest: ', largest)
+#
+# else:
+#     print('No Number ')
 
-smallest = None
-largest = None
-while True:
+# print('-------------------4_teh4-------------------')
+# x = random.randint(1,10)
+# print(x)
+# while True:
+#     num = int(input('guess a number: '))
+#     if x ==num:
+#         break
+#     elif x >= num:
+#         print('your number is too small')
+#     else:
+#         print('your name is too high')
 
-    ans = input("Enter a number or Enter quite")
-    if ans == "":
-        break
-    try:
-        num = int(input("Enter the number: "))
-        if smallest is None or num < smallest:
-            smallest= num
-        if largest is None or num > largest:
-            largest = num
-    except ValueError:
-        print("Invalid input: ")
-if smallest is not None and largest is not None:
-    print('smallest: ',  smallest)
-    print('largest: ', largest)
-
-else:
-    print('No Number ')
+print('-------------------4_teh5-------------------')
