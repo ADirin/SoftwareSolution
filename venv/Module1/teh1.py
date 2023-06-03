@@ -170,3 +170,23 @@ print('-------------------4_teh3-------------------')
 #         print('your name is too high')
 
 print('-------------------4_teh5-------------------')
+USERNAME = "amirDirin"
+PASSWD= "1234"
+
+login = str(input('enter user name: '))
+passw = str(input('enter passwd; '))
+counter = 0
+while True:
+    if (login == USERNAME and passw == PASSWD):
+        print('welcome')
+        break
+
+    else:
+        login = str(input('enter user name: '))
+        passw = str(input('enter passwd; '))
+    counter = counter+1
+    print('Your tried:  ', counter, '/5 ')
+    if login != USERNAME and passw != PASSWD and counter == 5:
+        print('Access Denied, you have already ', counter, ' times tried')
+        break
+
