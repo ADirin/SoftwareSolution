@@ -169,24 +169,34 @@ print('-------------------4_teh3-------------------')
 #     else:
 #         print('your name is too high')
 
-print('-------------------4_teh5-------------------')
-USERNAME = "amirDirin"
-PASSWD= "1234"
+# print('-------------------4_teh5-------------------')
+# USERNAME = "amirDirin"
+# PASSWD= "1234"
+#
+# login = str(input('enter user name: '))
+# passw = str(input('enter passwd; '))
+# counter = 0
+# while True:
+#     if (login == USERNAME and passw == PASSWD):
+#         print('welcome')
+#         break
+#
+#     else:
+#         login = str(input('enter user name: '))
+#         passw = str(input('enter passwd; '))
+#     counter = counter+1
+#     print('Your tried:  ', counter, '/5 ')
+#     if login != USERNAME and passw != PASSWD and counter == 5:
+#         print('Access Denied, you have already ', counter, ' times tried')
+#         break
+#
+print('-------------------4_teh6****!!!!!-------------------')
+# chatGPT solution
+import random
 
-login = str(input('enter user name: '))
-passw = str(input('enter passwd; '))
-counter = 0
-while True:
-    if (login == USERNAME and passw == PASSWD):
-        print('welcome')
-        break
+num_points = int(input("Enter the number of random points to generate: "))
+points = [(random.uniform(-1, 1), random.uniform(-1, 1)) for _ in range(num_points)]
+points_inside_circle = sum(1 for x, y in points if x**2 + y**2 < 1)
 
-    else:
-        login = str(input('enter user name: '))
-        passw = str(input('enter passwd; '))
-    counter = counter+1
-    print('Your tried:  ', counter, '/5 ')
-    if login != USERNAME and passw != PASSWD and counter == 5:
-        print('Access Denied, you have already ', counter, ' times tried')
-        break
-
+pi_approximation = 4 * points_inside_circle / num_points
+print("Approximation of pi:", pi_approximation)
