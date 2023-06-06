@@ -1,5 +1,6 @@
 import math
 import random
+import array
 
 # print('-------MODULE1--------------------------------MODULE1-------------------------')
 # print('----------Teh1---------------------------')
@@ -190,13 +191,139 @@ print('-------------------4_teh3-------------------')
 #         print('Access Denied, you have already ', counter, ' times tried')
 #         break
 #
-print('-------------------4_teh6****!!!!!-------------------')
-# chatGPT solution
-import random
+#print('-------------------4_teh6****!!!!!-------------------')
+# # chatGPT solution
+# import random
+#
+# num_points = int(input("Enter the number of random points to generate: "))
+# points = [(random.uniform(-1, 1), random.uniform(-1, 1)) for _ in range(num_points)]
+# points_inside_circle = sum(1 for x, y in points if x**2 + y**2 < 1)
+#
+# pi_approximation = 4 * points_inside_circle / num_points
+# print("Approximation of pi:", pi_approximation)
 
-num_points = int(input("Enter the number of random points to generate: "))
-points = [(random.uniform(-1, 1), random.uniform(-1, 1)) for _ in range(num_points)]
-points_inside_circle = sum(1 for x, y in points if x**2 + y**2 < 1)
+# print('-------------------5_teh1------------------------')
+# arpa= int(input("How many numer cubes you have: "))
+# total = 0
+# for _ in range(arpa):
+#     num = random.randint(1,6)
+#     print('the num', num)
+#     total += num
+#
+# print('sum of the numbers ', total)
 
-pi_approximation = 4 * points_inside_circle / num_points
-print("Approximation of pi:", pi_approximation)
+# print('-------------------5_teh2-----------------------')
+# a =  []
+#
+# while True:
+#     num = (input("Enter the number: "))
+#     if num == "":
+#         break
+#     a.append(int(num))
+#
+#     a.sort(reverse = True)
+#
+# print('five largest:  ')
+# for i in range(5):
+#     if i < len(a):
+#         print(a[i])
+#     else:
+#         break
+# print('-------------------5_teh3-----------------------')
+#
+# num = []
+# while True:
+#     luku = int(input('Enter an integer number: '))
+#     if  luku < 2:
+#         print('emty entry or less then two')
+#         break
+#     else:
+#         isPrime = True
+#         for i in range (2, int (luku**0.5) +1):
+#             if luku % i == 0:
+#                 isPrime = False
+#                 break
+#         if isPrime:
+#             num.append(luku)
+#             print(luku, " is prime")
+#         else:
+#             print(luku, " is not prime")
+#     for i in range (len(num)):
+#         print('the prime list is ', (num[i]))
+#
+# print('-------------------5_teh4-----------------------')
+# city = [5]
+# for i in range(1,6):
+#     kaup = str(input('enter the city name '))
+#     city.append(str(kaup))
+# #for i in range(6):
+# print('here are the list: ', city)
+# print('the third city: ', city[3])
+# print('-------------------6_teh1-----------------------')
+# num = []
+# def randomValue():
+#     luku = int(random.randint(1,6))
+#     return luku
+# def mainProg():
+#     while True:
+#         number = int(randomValue())
+#         num.append(number)
+#     # print('The number', number)
+#         if number == 6:
+#             print('Bingo, You got six ')
+#             break
+#     for i in range (len(num)):
+#         print('the numbers ', num)
+#         break
+# mainProg()
+
+# print('-------------------6_teh1****!!!!!-ChatGPT Solution------------------')
+# def heita_noppaa():
+#     return random.randint(1, 6)
+#
+# def paaohjelma():
+#     heitto = heita_noppaa()
+#     while heitto != 6:
+#         print("Heitto:", heitto)
+#         heitto = heita_noppaa()
+#     print("Kuutonen saatiin!")
+#
+# # Kutsutaan pääohjelmaa
+# paaohjelma()
+# print('-------------------6_teh2-----------------------')
+# num = []
+# def randomValue(num):
+#     return random.randint(1,num)
+# def mainProg():
+#     cube = int(input('Cube size: '))
+#     search = int(input('Enter the search value: '))
+#     while True:
+#         number = int(randomValue(cube))
+#         num.append(number)
+#     # print('The number', number)
+#         if number == search:
+#             print('Bingo, You got six ')
+#             break
+#     for i in range (len(num)):
+#         print('the numbers ', num)
+#         break
+# mainProg()
+# print('-------------------6_teh2****!!!!!-ChatGPT Solution------------------')
+#
+# import random
+#
+# def heita_noppaa(tahkojen_maara):
+#     return random.randint(1, tahkojen_maara)
+#
+# def paaohjelma():
+#     tahkojen_maara = int(input("Syötä nopan tahkojen yhteismäärä: "))
+#     maksimisilmaluku = int(input("Syötä nopan maksimisilmäluku: "))
+#
+#     heitto = heita_noppaa(tahkojen_maara)
+#     while heitto != maksimisilmaluku:
+#         print("Heitto:", heitto)
+#         heitto = heita_noppaa(tahkojen_maara)
+#     print("Maksimisilmäluku", maksimisilmaluku, "saatiin!")
+#
+# # Kutsutaan pääohjelmaa
+# paaohjelma()
