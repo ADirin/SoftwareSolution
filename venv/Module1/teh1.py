@@ -117,7 +117,7 @@ print('------------------------3_Teh2----------------------------')
 # else:
 #     pass
 
-print('-------------------------While Loops (while)---------------------')
+#print('-------------------------While Loops (while)---------------------')
 # print('-------------------4_teh1-------------------')
 # i = 1
 # while (i < 1000):
@@ -133,7 +133,7 @@ print('-------------------------While Loops (while)---------------------')
 #     i = float (input("enter the value in inches"))
 # print("bye ")
 
-print('-------------------4_teh3-------------------')
+#print('-------------------4_teh3-------------------')
 
 #
 # smallest = None
@@ -327,3 +327,136 @@ print('-------------------4_teh3-------------------')
 #
 # # Kutsutaan pääohjelmaa
 # paaohjelma()
+#
+# print('-------------------6_teh3-----------------------')
+# def bensa(gal):
+#     return  gal*3.785
+# def mainProgram():
+#     while True:
+#         gal = float(input('Enter gallon: '))
+#         if (gal < 0.0):
+#             print('not allowed, BYE')
+#             break
+#         else:
+#             lit = bensa(gal)
+#             print(gal,' gallon is equal to: ', lit)
+# mainProgram()
+
+# # print('-------------------6_teh3****!!!!!-ChatGPT Solution------------------')
+# def muunna_gallonat_litroiksi(gallonat):
+#     litrat = gallonat * 3.785
+#     return litrat
+#
+# def paaohjelma():
+#     while True:
+#         gallonat = float(input("Syötä bensiinin määrä gallonoina (negatiivinen lopettaa): "))
+#         if gallonat < 0:
+#             break
+#         litrat = muunna_gallonat_litroiksi(gallonat)
+#         print(gallonat, "gallonaa on", litrat, "litraa.")
+#
+# # Kutsutaan pääohjelmaa
+# paaohjelma()
+# print('-------------------6_teh4-----------------------')
+#
+# def sumList(aList):
+#     summa = sum(aList)
+#     return summa
+# def mainApp():
+#     number = [2,4,5,9,11]
+#     sum = sumList(number)
+#     print("here is the sum: ", sum)
+#
+# mainApp()
+
+# print('-------------------6_teh5-----------------------')
+#
+# def paritonList(alist):
+#     num = []
+#     for i in range (0, len(alist)):
+#         if alist[i] % 2 ==0:
+#             num.append(alist[i])
+#     return num
+#
+# def mainProg():
+#     myList = [2,4,5,6,7, 9, 10]
+#
+#     print('Here is the list without odd number : ', paritonList(myList))
+#     print('The original list: ', myList)
+#
+# mainProg()
+
+# print('-------------------6_teh5****!!!!!-ChatGPT Solution------------------')
+# def karsi_parittomat(lista):
+#     uusi_lista = [luku for luku in lista if luku % 2 == 0]
+#     return uusi_lista
+#
+# def main():
+#     # Luodaan lista kokonaislukuja
+#     alkuperainen_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#
+#     # Kutsutaan funktiota karsi_parittomat ja tallennetaan tulos uuteen listaan
+#     karsittu_lista = karsi_parittomat(alkuperainen_lista)
+#
+#     # Tulostetaan alkuperäinen lista
+#     print("Alkuperäinen lista:")
+#     print(alkuperainen_lista)
+#
+#     # Tulostetaan karsittu lista
+#     print("Karsittu lista (parilliset luvut):")
+#     print(karsittu_lista)
+#
+# if __name__ == "__main__":
+#     main()
+
+print('-------------------6_teh6-----------------------')
+#
+# def pizza(cent, price):
+#     area = math.pi * ((cent / 2)**2)
+#     unitPrice = price / area
+#     return unitPrice
+#
+# def mainProg():
+#     centForFirstSlice = float(input('Enter the first  pizza slice: '))
+#     priceForFirstSlice = float (input('hinta in (€): '))
+#
+#     centForSecondSlice = float(input('Enter the second pizza slice: '))
+#     priceForSecondSlice = float(input('hinta in (€): '))
+#     total1 = pizza(centForFirstSlice, priceForFirstSlice)
+#     total2 = pizza(centForSecondSlice, priceForSecondSlice)
+#
+#     if total1 < total2:
+#         print('the first price is cheaper ', total1)
+#     elif total1 > total2:
+#         print(f'the second price is cheaper ', total2)
+#     else:
+#         print('no difference in the price')
+#
+# mainProg()
+
+# print('-------------------7_teh1-----------------------')
+# def searchMonth(monthNo):
+#     season = ("Win", "Win", "Spr", "Spr", "Spr", "Sum", "Sum", "Sum", "Fal", "Fal", "Fal", "Win")
+#     return season[monthNo-1]
+#
+# def mainProg():
+#     index= int(input('enter the month number (1-12): '))
+#     season = searchMonth(index)
+#     print (" the season is ", season)
+# mainProg()
+print('-------------------7_teh1****!!!!!-ChatGPT Solution------------------')
+def hae_vuodenaika(kuukausi):
+    vuodenajat = (
+        "talvi", "talvi", "kevät", "kevät", "kevät",
+        "kesä", "kesä", "kesä", "syksy", "syksy",
+        "syksy", "talvi"
+    )
+    return vuodenajat[kuukausi - 1]
+
+def main():
+    kuukausi = int(input("Syötä kuukauden numero (1-12): "))
+    vuodenaika = hae_vuodenaika(kuukausi)
+    print("Kuukausi {} on {}".format(kuukausi, vuodenaika))
+
+if __name__ == "__main__":
+    main()
