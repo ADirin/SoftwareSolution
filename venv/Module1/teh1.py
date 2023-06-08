@@ -444,19 +444,105 @@ print('-------------------6_teh6-----------------------')
 #     season = searchMonth(index)
 #     print (" the season is ", season)
 # mainProg()
-print('-------------------7_teh1****!!!!!-ChatGPT Solution------------------')
-def hae_vuodenaika(kuukausi):
-    vuodenajat = (
-        "talvi", "talvi", "kevät", "kevät", "kevät",
-        "kesä", "kesä", "kesä", "syksy", "syksy",
-        "syksy", "talvi"
-    )
-    return vuodenajat[kuukausi - 1]
+# print('-------------------7_teh1****!!!!!-ChatGPT Solution------------------')
+# def hae_vuodenaika(kuukausi):
+#     vuodenajat = (
+#         "talvi", "talvi", "kevät", "kevät", "kevät",
+#         "kesä", "kesä", "kesä", "syksy", "syksy",
+#         "syksy", "talvi"
+#     )
+#     return vuodenajat[kuukausi - 1]
+#
+# def main():
+#     kuukausi = int(input("Syötä kuukauden numero (1-12): "))
+#     vuodenaika = hae_vuodenaika(kuukausi)
+#     print("Kuukausi {} on {}".format(kuukausi, vuodenaika))
+#
+# if __name__ == "__main__":
+#     main()
+# print('-------------------7_teh2-----------------------')
+# def addName():
+#     nimi = []
+#
+#     while True:
+#         name = str(input("Enter your name: "))
+#         if name == "":
+#             break
+#         if name in nimi:
+#             print('Exist ')
+#         else:
+#             print('new name ', name)
+#             nimi.append(name)
+#     print('add new name: ')
+#     for name in nimi:
+#         print(nimi)
+#
+# addName()
+# print('-------------------7_teh3-----------------------')
+# lentoAsema = []
+#
+# def lentoOpe(userIn):
+#     if userIn == "haku":
+#         lentoId= int(input('Here is the Airport ID: '))
+#         for i in range(0,len(lentoAsema)):
+#             if lentoNo== lentoAsema:
+#                 Print('the details: ')
+#     if userIn == "append":
+#         lentoId = int(input('enter the Airport id: '))
+#         lentoAsema.append(lentoId)
+#         print('The airport added')
+#     if userIn == "delete":
+#         lentoId = int(input('enter the Airport id to remove: '))
+#         lentoAsema.remove(lentoId)
+#         print(' the airport is removed')
+#     if userIn == "print":
+#         print('Here is the list, ', lentoAsema)
+# def mainProf():
+#     while True:
+#         userInput= str(input('What do you want: '))
+#         if userInput == "":
+#             break
+#         lentoOpe(userInput)
+# mainProf()
 
-def main():
-    kuukausi = int(input("Syötä kuukauden numero (1-12): "))
-    vuodenaika = hae_vuodenaika(kuukausi)
-    print("Kuukausi {} on {}".format(kuukausi, vuodenaika))
+# print('-------------------7_teh1****!!!!!-ChatGPT Solution------------------')
+# def lisaa_lentoasema(lentoasemat):
+#     icao_koodi = input("Syötä lentoaseman ICAO-koodi: ")
+#     nimi = input("Syötä lentoaseman nimi: ")
+#     lentoasemat[icao_koodi] = nimi
+#     print("Lentoasema tallennettu.")
 
-if __name__ == "__main__":
-    main()
+# def hae_lentoasema(lentoasemat):
+#     icao_koodi = input("Syötä lentoaseman ICAO-koodi: ")
+#     if icao_koodi in lentoasemat:
+#         print("Lentoaseman nimi: ", lentoasemat[icao_koodi])
+#     else:
+#         print("Lentoasemaa ei löytynyt.")
+
+# def main():
+#     lentoasemat = {}
+#
+#     while True:
+#         print("\nValitse toiminto:")
+#         print("1. Lisää uusi lentoasema")
+#         print("2. Hae lentoaseman tiedot")
+#         print("3. Lopeta")
+#
+#         valinta = input("Syötä valintasi (1-3): ")
+#
+#         if valinta == "1":
+#             lisaa_lentoasema(lentoasemat)
+#         elif valinta == "2":
+#             hae_lentoasema(lentoasemat)
+#         elif valinta == "3":
+#             break
+#         else:
+#             print("Virheellinen valinta. Valitse uudelleen.")
+#
+#     print("Ohjelma lopetettu.")
+#
+# if __name__ == "__main__":
+#     main()
+
+print('-------------------8_teh1-----------------------')
+
