@@ -1,6 +1,7 @@
 import math
 import random
 import array
+import mysql.connector
 
 # print('-------MODULE1--------------------------------MODULE1-------------------------')
 # print('----------Teh1---------------------------')
@@ -409,7 +410,7 @@ print('------------------------3_Teh2----------------------------')
 # if __name__ == "__main__":
 #     main()
 
-print('-------------------6_teh6-----------------------')
+#print('-------------------6_teh6-----------------------')
 #
 # def pizza(cent, price):
 #     area = math.pi * ((cent / 2)**2)
@@ -545,4 +546,178 @@ print('-------------------6_teh6-----------------------')
 #     main()
 
 print('-------------------8_teh1-----------------------')
+import mysql.connector as mariadb
+mariadb_connection = mariadb.connect(user='root', password ='Test1234', database = 'lentoasema', host='127.0.0.1', port='3308')
+create_cursor= mariadb_connection.cursor()
+# create_cursor.execute("SHOW TABLES")
+# for x in create_cursor:
+#     print(x)
 
+# create_cursor.execute("CREATE TABLE airport_table (ICAcode VARCHAR (4), AsemaNimi VARCHAR (3)), maa(2)")
+# create_cursor.execute("SHOW TABLES")
+# for x in create_cursor:
+#    print(x)
+# sql_statment = 'INSERT INTO airport_table (ICAcode, AsemaNimi) VALUES ("789", "OUL"), ("135", "VSA")';
+# # item_to_insert = ('123', 'Hel')
+# # item_to_insert = ('456', 'OUL')
+# # item_to_insert = ('789', 'TRE')
+# create_cursor.execute(sql_statment)
+# without commit it doesnot work
+# mariadb_connection.commit();
+# sql_statment= 'SELECT * from airport_table'
+# create_cursor.execute(sql_statment)
+# myresult = create_cursor.fetchall()
+# # print(myresult)
+# print('-----------------based on the instruction-----------')
+# lentoAsema= {}
+#
+# def addLentoAsema(lentoAsema):
+#     while True:
+#         asemacode = input('endter the code')
+#         asemaNimi = str(input('enter the name '))
+#         maa= str(input('Add the country intials'))
+#         if (asemacode == ""):
+#             break
+#         else:
+#             sql_statment = 'INSERT INTO airport_table (ICAcode, AsemaNimi, maa) VALUES (%s, %s, %s)';
+#             items_to_insert = (asemacode,asemaNimi, maa)
+#             create_cursor.execute(sql_statment, items_to_insert)
+#             mariadb_connection.commit();
+#             lentoAsema[asemacode] = asemaNimi
+#             print('data added')
+#
+# def getData(lentoAsema):
+#     sql_statment = 'SELECT * from airport_table'
+#     create_cursor.execute(sql_statment)
+#     myresult = create_cursor.fetchall()
+#     print(myresult)
+#
+# def removeData(lentoAsema):
+#     print('Not implemented')
+#
+# print('Select the number, 1 for Add, 2 for searchm and 3 for removing')
+#
+# number = input("what you want to do (1-3): ")
+# if number == "1":
+#     addLentoAsema(lentoAsema)
+# print('select to add')
+# if number=="2":
+#     getData(lentoAsema)
+# if number=="3":
+#     removeData(lentoAsema)
+#
+# print('######--------**************')
+# for x in range (0,len(lentoAsema)):
+#     print('the data in the ', lentoAsema)
+
+
+print('-------------------8_teh2-----------------------')
+#
+# query ="ALTER TABLE airport_table ADD maa VARCHAR(2)"
+# create_cursor.execute(query)
+# mariadb_connection.commit()
+# print('new Column added...')
+#
+# def searchAirport(name):
+#     if (name != ""):
+#         sql_statement = "SELECT * from airport_table where maa == 'name'"
+#         create_cursor.execute(sql_statement)
+#         myresult = create_cursor.fetchall()
+#         print(myresult)
+#     else:
+#         return None
+#
+# def calculateAIrport(lentoAsema):
+#     lentoAsema = {
+#         "small_airport" : 0,
+#         "medium_airport": 0,
+#         "large_airport":0,
+#         "heliport":0,
+#         "closed":
+#     }
+#
+#
+# print("---*****chatgpt 8.2****.................")
+# import requests
+#
+# def hae_lentokentat(maakoodi):
+#     url = f"https://ourairports.com/countries/{maakoodi.upper()}/airports.html"
+#     response = requests.get(url)
+#     if response.status_code == 200:
+#         return response.text
+#     else:
+#         return None
+
+# def laske_lentokentat(sisalto):
+#     lentokentat = {
+#         "small_airport": 0,
+#         "medium_airport": 0,
+#         "large_airport": 0,
+#         "heliport": 0,
+#         "closed": 0
+#     }
+#
+#     for rivi in sisalto.split("\n"):
+#         if "class=\"type_" in rivi:
+#             lentokentta_tyyppi = rivi.split("class=\"type_")[1].split("\"")[0]
+#             lentokentat[lentokentta_tyyppi] += 1
+#
+#     return lentokentat
+#
+# maakoodi = input("Syötä maakoodi: ")
+# sisalto = hae_lentokentat(maakoodi)
+#
+# if sisalto:
+#     lentokentat = laske_lentokentat(sisalto)
+#
+#     print(f"Maassa {maakoodi.upper()} on seuraavat lentokenttien lukumäärät:")
+#     print("Pieniä lentokenttiä:", lentokentat["small_airport"])
+#     print("Keski-kokoisia lentokenttiä:", lentokentat["medium_airport"])
+#     print("Suuria lentokenttiä:", lentokentat["large_airport"])
+#     print("Helikopterikenttiä:", lentokentat["heliport"])
+#     print("Suljettuja lentokenttiä:", lentokentat["closed"])
+# else:
+#     print("Virhe: Lentokenttätietoja ei voitu hakea.")
+
+
+# name = str(input('Enter the intial '))
+# searchAirport(name)
+
+
+
+# print("---*****chatgpt 8.3****.................")
+
+#
+#
+# from geopy.geocoders import Nominatim
+# from geopy.distance import geodesic
+#
+# def hae_koordinaatit(icao_koodi):
+#     geolocator = Nominatim(user_agent="lentokentta_etaisyys")
+#     sijainti = geolocator.geocode(icao_koodi)
+#     if sijainti:
+#         return sijainti.latitude, sijainti.longitude
+#     else:
+#         return None
+#
+# def laske_etaisyys(lat1, lon1, lat2, lon2):
+#     piste1 = (lat1, lon1)
+#     piste2 = (lat2, lon2)
+#     etaisyys = geodesic(piste1, piste2).kilometers
+#     return etaisyys
+#
+# kentta1 = input("Syötä ensimmäisen lentokentän ICAO-koodi: ")
+# kentta2 = input("Syötä toisen lentokentän ICAO-koodi: ")
+#
+# koordinaatit1 = hae_koordinaatit(kentta1)
+# koordinaatit2 = hae_koordinaatit(kentta2)
+#
+# if koordinaatit1 and koordinaatit2:
+#     lat1, lon1 = koordinaatit1
+#     lat2, lon2 = koordinaatit2
+#
+#     etaisyys = laske_etaisyys(lat1, lon1, lat2, lon2)
+#
+#     print(f"Lentokenttien {kentta1} ja {kentta2} välinen etäisyys on {etaisyys:.2f} kilometriä.")
+# else:
+#     print("Virhe: Lentokentän koordinaatteja ei voitu hakea.")
